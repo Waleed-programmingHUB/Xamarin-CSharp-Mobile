@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LearnKnowledgeMobileV.MainPage"
+             Visual="Material">
+
+    <StackLayout>
+        <!--Top Custom Title Bar-->
+        <StackLayout BackgroundColor="#01579B" >
+            <Image Source="xamarinlogo" HeightRequest="60" WidthRequest="60"
+               HorizontalOptions="Center" Margin="0,10,0,0"/>
+            
+            <Label Text="Learn Knowledge in C# Xamarin" HorizontalTextAlignment="Center" FontSize="26" Margin="0,0,0,20"/>
+        </StackLayout>
+        
+        <!--Page Content here-->
+
+        <ScrollView>
+            <!--My Scroll View-->
+            <StackLayout Orientation="Vertical" Margin="18,30,30,0">
+                <!--Insert Items Layout-->
+                <!--Inserted Here-->
+                <Label Text="Enter Your Number"/>
+                <Entry x:Name="inputEntryBox" Placeholder="e.g:123132!" FontSize="22"  PlaceholderColor="#434343"/>
+                
+                <Label Text="Enter Your Word"/>
+                <Entry x:Name="inputEntryBox2" Placeholder="your question!"  FontSize="22"  PlaceholderColor="#434343"/>
+                <!--Radio Buttons-->
+                <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                    <Label Text="Choice Your Options?"/>
+                    <RadioButton x:Name="numTowordRadioButton" Content="Number to Word" Margin="5,10,0,0"/>
+                    <RadioButton x:Name="numToromanRadioButton" Content="Number to Roman" Margin="5,10,0,0"/>
+                    <RadioButton x:Name="getPluralRadioButton" Content="Get Plural" Margin="5,10,0,0"/>
+                </StackLayout>
+
+                <!--Output Labels-->
+                <Label Text="Your Result" FontSize="16" Margin="0,10,0,10"/>
+                <Label x:Name="outputLabelAnswer" FontSize="20" Margin="0,0,0,50"/>
+
+                <!--Action Button-->
+                <Button 
+                    TextTransform="None"
+                    Text="Get Answer" 
+                    BackgroundColor="#29B6F6" 
+                    Opacity="10"
+                    x:Name="getAction"
+                    Clicked="getAction_Clicked" 
+                    CornerRadius="25"
+                    VerticalOptions="End"/>
+               
+            </StackLayout>
+
+        </ScrollView>
+ 
+    </StackLayout>
+
+</ContentPage>
